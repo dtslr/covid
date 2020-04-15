@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="https://img.icons8.com/ultraviolet/40/000000/coronavirus.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/d2703a8d3b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <meta name="description" content="Get an overview of the cases, deaths and recoveries per country during the fight against COVID-19. #TogetherAgainstCovid19">
+    <meta name="description"
+        content="Get an overview of the cases, deaths and recoveries per country during the fight against COVID-19. #TogetherAgainstCovid19">
     <meta name="keywords" content="COVID-19, SARS-COV-2, Coronavirus, Information">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162271359-1"></script>
@@ -45,38 +46,48 @@
 
         <section class="section">
             <h1 id="cName" class="title is-5">Country</h1>
-            <div class="box has-background-info has-text-white">
-                <p class="label has-text-white">Infections</p>
-                <article class="media">
-                    <div class="media-left">
-                        <h1 class="title is-4 has-text-white "><i class="fas fa-head-side-virus"></i></h1>
+            <div class="columns">
+                <div class="column">
+                    <div class="box has-background-info has-text-white">
+                        <p class="label has-text-white">Infections &ThickSpace; <span id="cTc"
+                                class="tag is-danger">0</span></p>
+                        <article class="media">
+                            <div class="media-left">
+                                <h1 class="title is-4 has-text-white "><i class="fas fa-head-side-virus"></i></h1>
+                            </div>
+                            <div class="media-content">
+                                <h1 style="overflow: hidden;" id="cCases" class="title is-4 has-text-white">0</h1>
+                            </div>
+                        </article>
                     </div>
-                    <div class="media-content">
-                        <h1 id="cCases" class="title is-4 has-text-white">0</h1>
-                    </div>
-                </article>
-            </div>
-            <div class="box has-background-dark has-text-white">
-                <p class="label has-text-white">Deaths</p>
-                <article class="media">
-                    <div class="media-left">
-                        <h1 class="title is-4 has-text-white "><i class="fas fa-cross"></i></h1>
-                    </div>
-                    <div class="media-content">
-                        <h1 id="cDeath" class="title is-4 has-text-white">0</h1>
-                    </div>
-                </article>
-            </div>
-            <div class="box has-background-light">
-                <p class="label ">Recovered</p>
-                <article class="media">
-                    <div class="media-left">
-                        <h1 class="title is-4  "><i class="fas fa-shield-virus"></i></h1>
-                    </div>
-                    <div class="media-content">
-                        <h1 id="cRec" class="title is-4 ">0</h1>
-                    </div>
-                </article>
+                </div>
+                <div class="column">
+                <div class="box has-background-dark has-text-white">
+                    <p class="label has-text-white">Deaths &ThickSpace; <span id="cTd" class="tag is-danger">0</span>
+                    </p>
+                    <article class="media">
+                        <div class="media-left">
+                            <h1 class="title is-4 has-text-white "><i class="fas fa-cross"></i></h1>
+                        </div>
+                        <div class="media-content">
+                            <h1 style="overflow: hidden;" id="cDeath" class="title is-4 has-text-white">0</h1>
+                        </div>
+                    </article>
+                </div>
+                </div>
+                <div class="column">
+                <div class="box has-background-link">
+                    <p class="label has-text-white ">Countries</p>
+                    <article class="media">
+                        <div class="media-left">
+                            <h1 class="title is-4  has-text-white "><i class="fas fa-globe-europe"></i></h1>
+                        </div>
+                        <div class="media-content">
+                            <h1 style="overflow: hidden;" id="cAff" class="title is-4 has-text-white ">0</h1>
+                        </div>
+                    </article>
+                </div>
+                </div>
             </div>
             <div class="tags has-addons">
                 <span class="tag is-dark">Updated on</span>
@@ -94,7 +105,8 @@
                     from others. 1,5 meters should be enough.</h1>
             </div>
             <div class="box">
-                <h1 class="subtitle is-5"><i class="fas fa-home has-text-info"></i>&ThickSpace; Stay safe at home. Plan no
+                <h1 class="subtitle is-5"><i class="fas fa-home has-text-info"></i>&ThickSpace; Stay safe at home. Plan
+                    no
                     parties or events and limit the number of visitors.</h1>
             </div>
             <div class="box">
@@ -122,13 +134,14 @@
                     </a>
                 </div>
                 <div class="column">
-                    <p>This website is for information purposes only. <br> No rights can be derived from given information.
+                    <p>This website is for information purposes only. <br> No rights can be derived from given
+                        information.
                     </p>
                     <br>
                     <p>For more information <a href="https://www.who.int/">visit the World Health
                             Organisation's site</a></p>
-                            <br>
-                            <p>Created using <a href="https://github.com/NOVELCOVID">NOVELCOVID API</a></a></p>
+                    <br>
+                    <p>Created using <a href="https://github.com/NOVELCOVID">NOVELCOVID API</a></a></p>
                 </div>
                 <div class="column">
                     <h1 class="title is-4">Support me</h1>
@@ -143,60 +156,7 @@
             </div>
         </footer>
 
-        <script>
-                let codes = [{ n: "Australia", c: "AU" }, { n: "Bangladesh", c: "BD" }, { n: "Belgium", c: "BE" }, { n: "Brazil", c: "BR" }, { n: "China", c: "CN" }, { n: "Croatia", c: "HR" }, { n: "Denmark", c: "DK" }, { n: "Egypt", c: "EG" }, { n: "France", c: "FR" }, { n: "Germary", c: "DE" }, { n: "India", c: "IN" }, { n: "Iran", c: "IR" }, { n: "Iraq", c: "IQ" }, { n: "Ireland", c: "IE" }, { n: "Italy", c: "IT" }, { n: "Japan", c: "JP" }, { n: "Liechtenstein", c: "LI" }, { n: "Luxembourg", c: "LU" }, { n: "Mexico", c: "MX" }, { n: "Netherlands", c: "NL" }, { n: "Portugal", c: "PT" }, { n: "Russia", c: "RU" }, { n: "South Korea", c: "KR" }, { n: "Sweden", c: "SE" }, { n: "Switzerland", c: "CH" }, { n: "Turkey", c: "TR" }, { n: "United States", c: "US" }];
-
-                let countryInput = document.getElementById("cInput");
-
-                let getCountryData = () => {
-                    let client = new XMLHttpRequest();
-                    client.open("GET", 'https://corona.lmao.ninja/countries', false);
-                    client.send();
-                    let data = JSON.parse(client.responseText);
-                    return data;
-                }
-
-                let getWorldData = () => {
-                    let client = new XMLHttpRequest();
-                    client.open("GET", 'https://corona.lmao.ninja/all', false);
-                    client.send();
-                    let data = JSON.parse(client.responseText);
-                    return data;
-                }
-
-                let getData = () => {
-                    let data = {
-                        country: getCountryData(),
-                        world: getWorldData(),
-                    };
-                    return data;
-                }
-
-                let getArea = () => {
-                    if (codes.filter(code => code.c === countryInput.value.toUpperCase())) {
-                        let area = codes.filter(code => code.c === countryInput.value.toUpperCase())[0];
-                        if (!area) area = { n: 'World' };
-                        return area;
-
-                    }
-                }
-                countryInput.addEventListener('input', evt => {
-                    let areaName = getArea().n;
-                    let specific = getData().country.filter(data => data.countryInfo.iso2 === getArea().c)[0];
-                    if (!specific) specific = getWorldData();
-                    changeData(areaName, specific.cases, specific.deaths, specific.recovered, specific.updated);
-                })
-
-                let changeData = (areaName, cases, death, recovery, time) => {
-                    let cName = document.getElementById("cName").innerHTML = areaName;
-                    let cCases = document.getElementById("cCases").innerHTML = cases;
-                    let cDeath = document.getElementById("cDeath").innerHTML = death;
-                    let cRec = document.getElementById("cRec").innerHTML = recovery;
-                    let cTime = document.getElementById("cTime").innerHTML = new Date(time).toUTCString();
-                }
-
-                window.onload = changeData("World", getWorldData().cases, getWorldData().deaths, getWorldData().recovered, getWorldData().updated);
-        </script>
+        <script src="./master.js"></script>
 </body>
 
 
