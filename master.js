@@ -15,6 +15,7 @@ let getWorldData = () => {
     client.open("GET", 'https://corona.lmao.ninja/v2/all', false);
     client.send();
     let data = JSON.parse(client.responseText);
+    // data.population = "7800000000+"
     return data;
 }
 
@@ -26,10 +27,22 @@ let getArea = () => {
 
     }
 }
+
+let getPopulation = (iso2) => {
+    let client = new XMLHttpRequest();
+    client.open("GET", `https://restcountries.eu/rest/v2/alpha/${iso2}`, false)
+    client.send();
+    let data = JSON.parse(client.responseText);
+    return data
+}
 countryInput.addEventListener('input', evt => {
     let areaName = getArea().n;
     let specific = getCountryData().filter(data => data.countryInfo.iso2 === getArea().c)[0];
-    if (!specific) specific = getWorldData();
+    if (!specific) {
+        specific = getWorldData();
+    } else {
+        specific.population = getPopulation(getArea().c).population
+    }
     changeData(areaName, specific);
 })
 
@@ -57,6 +70,9 @@ let changeData = (areaName, data) => {
     let cTime = document.getElementById("cTime").innerHTML = new Date(data.updated).toUTCString();
     let cTc = document.getElementById("cTc").innerHTML = tDc;
     let cTd = document.getElementById("cTd").innerHTML = tDd;
+    let pop = document.getElementById("pop").innerHTML = data.population || "7800000000+"
+    let tpm = document.getElementById("tpm").innerHTML = data.testsPerOneMillion
+    let cpm = document.getElementById("cpm").innerHTML = data.casesPerOneMillion
 }
 
 window.onload = changeData("World", getWorldData());
