@@ -2,7 +2,7 @@
 
 Everyone can do their bit to prevent spreading. This is my way to contribute!
 
-https://covid19.dtslr.com
+https://covid.dtslr.com
 ```Keep distance, don't die,
 Keep distance, don't die,
 
