@@ -1,0 +1,21 @@
+/* Main */
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .content {
+  flex: 1;
+  width: 80%;
+  margin: 0 10%;
+}
+
+/* Brand */
+.navbar .content .brand a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 900;
+}
