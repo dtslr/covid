@@ -2,6 +2,6 @@ const Content = () => {
   return <div className="content"></div>;
 };
 
-module.exports = Content;
+export default Content;
 
 // TODO: Add Content

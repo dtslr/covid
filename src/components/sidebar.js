@@ -2,6 +2,6 @@ const Sidebar = () => {
   return <div className="sidebar"></div>;
 };
 
-module.exports = Sidebar;
+export default Sidebar;
 
 // TODO: Create Sidebar

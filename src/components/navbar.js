@@ -2,6 +2,6 @@ const Navbar = () => {
   return <div className="navbar"></div>;
 };
 
-module.exports = Navbar;
+export default Navbar;
 
 // TODO: Create Navbar
