@@ -1,17 +1,10 @@
-## Information about the SARS-CoV-2 
+## Covid Counter
 
-Everyone can do their bit to prevent spreading. This is my way to contribute!
+The coronavirus is ruining the whole world.
+Almost one year ago I released the first version of Covid Counter in Vanilla JS.
 
-https://covid.dtslr.com
-```Keep distance, don't die,
-Keep distance, don't die,
+The last year I've taught myself React. It seems like this old project could use a refresh.
 
-Don't keep distance, die
+See the project live at https://covid.jesper.page
 
-~ Arjen Lubach 2020
-```
-
-Created by Jesper van Daatselaar 
-
-[Bulma](https://bulma.io) and [Font Awesome](https://fontawesome.com)
-
+Created by [Jesper van Daatselaar](https://jesper.page)
