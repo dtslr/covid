@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="content">
         <div className="brand item">
           <a href="/" className="">
-            Covid Counter
+            CoviData
           </a>
         </div>
       </div>
