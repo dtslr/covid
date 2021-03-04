@@ -15,5 +15,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// TODO: Create Navbar
